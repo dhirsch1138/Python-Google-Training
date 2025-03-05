@@ -3,7 +3,7 @@
 {
 	"name": "Python 3",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/python-3-anaconda",
+	"image": "mcr.microsoft.com/devcontainers/anaconda",
 	"features": {
 		"ghcr.io/devcontainers-extra/features/wget-apt-get:1": {}
 	}
