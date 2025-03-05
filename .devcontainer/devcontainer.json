@@ -6,16 +6,21 @@
 	"image": "mcr.microsoft.com/devcontainers/anaconda",
 	"features": {
 		"ghcr.io/devcontainers-extra/features/wget-apt-get:1": {}
-	}
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
+
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+    // for jypter https://github.com/devcontainers/images/tree/main/src/anaconda
+	"forwardPorts": [8888],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+
+    // Use 'postStartCommand' to run commands after the container is created.
+    "postStartCommand": "nohup bash -c 'jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root &'",
 
 	// Configure tool-specific properties.
 	// "customizations": {},

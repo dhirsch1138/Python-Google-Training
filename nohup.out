@@ -1,0 +1,32 @@
+[W 2025-03-05 15:42:10.101 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2025-03-05 15:42:11.176 ServerApp] Extension package panel.io.jupyter_server_extension took 1.0735s to import
+[I 2025-03-05 15:42:11.177 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2025-03-05 15:42:11.180 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2025-03-05 15:42:11.184 ServerApp] jupyterlab | extension was successfully linked.
+[I 2025-03-05 15:42:11.187 ServerApp] notebook | extension was successfully linked.
+[I 2025-03-05 15:42:11.188 ServerApp] Writing Jupyter server cookie secret to /home/vscode/.local/share/jupyter/runtime/jupyter_cookie_secret
+[I 2025-03-05 15:42:11.520 ServerApp] notebook_shim | extension was successfully linked.
+[I 2025-03-05 15:42:11.521 ServerApp] panel.io.jupyter_server_extension | extension was successfully linked.
+[I 2025-03-05 15:42:11.537 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2025-03-05 15:42:11.539 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2025-03-05 15:42:11.539 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2025-03-05 15:42:11.541 LabApp] JupyterLab extension loaded from /opt/conda/lib/python3.12/site-packages/jupyterlab
+[I 2025-03-05 15:42:11.541 LabApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
+[I 2025-03-05 15:42:11.542 LabApp] Extension Manager is 'pypi'.
+[I 2025-03-05 15:42:11.571 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2025-03-05 15:42:11.576 ServerApp] notebook | extension was successfully loaded.
+[I 2025-03-05 15:42:11.577 ServerApp] panel.io.jupyter_server_extension | extension was successfully loaded.
+[I 2025-03-05 15:42:11.577 ServerApp] Serving notebooks from local directory: /workspaces/Python-Google-Training
+[I 2025-03-05 15:42:11.577 ServerApp] Jupyter Server 2.14.1 is running at:
+[I 2025-03-05 15:42:11.577 ServerApp] http://codespaces-27f766:8888/tree?token=49eed2aa003900c7dfbd3867e2f3b1a2f0c980f15e4c6710
+[I 2025-03-05 15:42:11.577 ServerApp]     http://127.0.0.1:8888/tree?token=49eed2aa003900c7dfbd3867e2f3b1a2f0c980f15e4c6710
+[I 2025-03-05 15:42:11.577 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2025-03-05 15:42:11.580 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2025-03-05 15:42:11.580 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/vscode/.local/share/jupyter/runtime/jpserver-244-open.html
+    Or copy and paste one of these URLs:
+        http://codespaces-27f766:8888/tree?token=49eed2aa003900c7dfbd3867e2f3b1a2f0c980f15e4c6710
+        http://127.0.0.1:8888/tree?token=49eed2aa003900c7dfbd3867e2f3b1a2f0c980f15e4c6710
+[I 2025-03-05 15:42:11.616 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
