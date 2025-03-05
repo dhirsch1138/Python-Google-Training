@@ -30,3 +30,13 @@
         http://codespaces-27f766:8888/tree?token=49eed2aa003900c7dfbd3867e2f3b1a2f0c980f15e4c6710
         http://127.0.0.1:8888/tree?token=49eed2aa003900c7dfbd3867e2f3b1a2f0c980f15e4c6710
 [I 2025-03-05 15:42:11.616 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2025-03-05 15:47:28.122 ServerApp] 302 GET / (@127.0.0.1) 0.41ms
+[I 2025-03-05 15:47:28.345 JupyterNotebookApp] 302 GET /tree? (@127.0.0.1) 0.60ms
+[I 2025-03-05 15:49:52.006 ServerApp] 302 GET / (@127.0.0.1) 0.39ms
+[I 2025-03-05 15:49:52.071 JupyterNotebookApp] 302 GET /tree? (@127.0.0.1) 0.46ms
+[I 2025-03-05 15:50:12.153 ServerApp] User b4009730dbe64756a2ceda593ec5c3c9 logged in.
+[I 2025-03-05 15:50:12.153 ServerApp] 302 POST /login?next=%2Ftree%3F (b4009730dbe64756a2ceda593ec5c3c9@127.0.0.1) 0.93ms
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.

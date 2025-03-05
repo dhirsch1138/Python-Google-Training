@@ -20,7 +20,7 @@
 	// "postCreateCommand": "pip3 install --user -r requirements.txt",
 
     // Use 'postStartCommand' to run commands after the container is created.
-    "postStartCommand": "nohup bash -c 'jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root &'",
+    "postStartCommand": "nohup bash -c 'jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root &'"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
