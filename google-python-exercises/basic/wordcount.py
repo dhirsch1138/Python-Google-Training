@@ -67,26 +67,21 @@ def count_words(filename):
   f = open(filename, 'r')
   line = f.readline().lower()
   while line:
-      for y in line.split(" "):
-        wordList = logWord(y,wordList)    
+      wordsFromLine = line.split(" ")
+      wordList = logWordsFromLine(wordsFromLine,wordList)  
       line = f.readline().lower()
   f.close()
   return wordList
 
-def logWord(word, tupleList):
-  valueList = listWords(tupleList)
-  try:
-    x = valueList.index(word)
-    tupleList[x] = [word, (tupleCount(tupleList[x]) + 1)]
-  except ValueError:
-    tupleList = tupleList + [[word, 1]]
+def logWordsFromLine(wordsFromLine, tupleList):
+  for word in wordsFromLine:
+   valueList = [tupleValue(x) for x in tupleList]
+   try:
+     x = valueList.index(word)
+     tupleList[x] = [word, (tupleCount(tupleList[x]) + 1)]
+   except ValueError:
+     tupleList.append([word,1])
   return tupleList
-
-def listWords(tupleList):
-  words = list()
-  for x in tupleList:
-    words = words + [tupleValue(x)]
-  return words
 
 def tupleCount(tuple):
   return tuple[1]
