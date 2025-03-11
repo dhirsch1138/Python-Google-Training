@@ -59,24 +59,26 @@ def print_top(filename):
 
 def print_output(tupleList):
   for tuple in tupleList:
-    print(repr(tupleValue(tuple)), " ", tupleCount(tuple))
+    print(tupleValue(tuple), " ", tupleCount(tuple))
   return 1
 
 def count_words(filename):
   wordList = list()
+  tupleList = list()
   f = open(filename, 'r')
   line = f.readline().lower()
   while line:
-      wordsFromLine = line.split(" ")
+      wordsFromLine = [repr(y) for y in line.split(" ")]
       for word in wordsFromLine:
         try:
-          x = [tupleValue(x) for x in wordList].index(word)
-          wordList[x] = [word, (tupleCount(wordList[x]) + 1)]
+          x = wordList.index(word)
+          tupleList[x] = [word, (tupleCount(tupleList[x]) + 1)]
         except ValueError:
-          wordList.append([word,1])
+          wordList.append(word)
+          tupleList.append([word,1])
       line = f.readline().lower()
   f.close()
-  return wordList
+  return tupleList
 
 def tupleCount(tuple):
   return tuple[1]
