@@ -69,9 +69,8 @@ def count_words(filename):
   while line:
       wordsFromLine = line.split(" ")
       for word in wordsFromLine:
-        valueList = [tupleValue(x) for x in wordList]
         try:
-          x = valueList.index(word)
+          x = [tupleValue(x) for x in wordList].index(word)
           wordList[x] = [word, (tupleCount(wordList[x]) + 1)]
         except ValueError:
           wordList.append([word,1])
