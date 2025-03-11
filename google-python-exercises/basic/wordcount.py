@@ -65,12 +65,11 @@ def print_output(tupleList):
 def count_words(filename):
   wordList = list()
   f = open(filename, 'r')
-  with f as x:
-    line = x.readline().lower()
-    while line:
-        for y in line.split(" "):
-          wordList = logWord(y,wordList)    
-        line = x.readline().lower()
+  line = f.readline().lower()
+  while line:
+      for y in line.split(" "):
+        wordList = logWord(y,wordList)    
+      line = f.readline().lower()
   f.close()
   return wordList
 
