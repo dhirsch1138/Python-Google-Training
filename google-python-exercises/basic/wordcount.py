@@ -46,16 +46,54 @@ import sys
 # Then print_words() and print_top() can just call the utility function.
 
 def print_words(filename):
-  file = open(filename,"r")
-  
-  return
+  list = count_words(filename)
+  list.sort(key=tupleValue)
+  print_output(list)
+  return 1
 
 def print_top(filename):
-  return
+  list = count_words(filename)
+  list.sort(key=tupleCount, reverse=True)
+  print_output(list[0:20])
+  return 1
 
-def wordCount(tuple):
+def print_output(tupleList):
+  for tuple in tupleList:
+    print(repr(tupleValue(tuple)), " ", tupleCount(tuple))
+  return 1
+
+def count_words(filename):
+  wordList = list()
+  f = open(filename, 'r')
+  with f as x:
+    line = x.readline().lower()
+    while line:
+        for y in line.split(" "):
+          wordList = logWord(y,wordList)    
+        line = x.readline().lower()
+  f.close()
+  return wordList
+
+def logWord(word, tupleList):
+  valueList = listWords(tupleList)
+  try:
+    x = valueList.index(word)
+    tupleList[x] = [word, (tupleCount(tupleList[x]) + 1)]
+  except ValueError:
+    tupleList = tupleList + [[word, 1]]
+  return tupleList
+
+def listWords(tupleList):
+  words = list()
+  for x in tupleList:
+    words = words + [tupleValue(x)]
+  return words
+
+def tupleCount(tuple):
   return tuple[1]
 
+def tupleValue(tuple):
+  return tuple[0]
 
 ###
 
