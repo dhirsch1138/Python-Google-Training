@@ -65,19 +65,18 @@ def print_output(tupleList):
 def count_words(filename):
   wordList = list()
   tupleList = list()
-  f = open(filename, 'r')
-  line = f.readline().lower()
+  textfile = open(filename, 'r')
+  line = textfile.readline().lower()
   while line:
-      wordsFromLine = [repr(y) for y in line.split(" ")]
-      for word in wordsFromLine:
+      for word in [repr(y) for y in line.split(" ")]:
         try:
           x = wordList.index(word)
-          tupleList[x] = [word, (tupleCount(tupleList[x]) + 1)]
+          tupleList[x] = [word, tupleCount(tupleList[x]) + 1]
         except ValueError:
           wordList.append(word)
           tupleList.append([word,1])
-      line = f.readline().lower()
-  f.close()
+      line = textfile.readline().lower()
+  textfile.close()
   return tupleList
 
 def tupleCount(tuple):
