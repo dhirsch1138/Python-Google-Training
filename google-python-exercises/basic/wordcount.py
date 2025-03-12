@@ -75,9 +75,8 @@ def count_words(filename):
     #process one line at a time
     for line in lines:
       #the instructions say everything should be treated as lowercase
-      line = line.lower()
       #process each word in the line, where words the line delimited by spaces
-      for word in line.split(" "):
+      for word in line.lower().split(" "):
         #IF we find word in wordList then increment THEN count in countList
         #  the wordList and countList will keep corresponding positioning
         try:
