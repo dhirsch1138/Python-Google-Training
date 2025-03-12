@@ -63,26 +63,29 @@ def print_output(tupleList):
   return 1
 
 def count_words(filename):
-  #The wordList and tupleList will keep corresponding positioning
+  #The wordList and countList will keep corresponding positioning
   #this uses more memory but searches are quicker
   wordList = list()
-  tupleList = list()
+  countList = list()
   textfile = open(filename, 'r')
   line = textfile.readline().lower()
   while line:
       for word in [repr(y) for y in line.split(" ")]:
-        #if we find word in wordList then increment the tuple in tupleList
-        #  the wordList and tupleList will keep corresponding positioning
+        #if we find word in wordList then increment the count in countList
+        #  the wordList and countList will keep corresponding positioning
         try:
           x = wordList.index(word)
-          tupleList[x] = [word, tupleCount(tupleList[x]) + 1]
+          countList[x] = countList[x] + 1
         except ValueError:
-        #else append the word to the wordList, and append a new tuple
-        #  the wordList and tupleList will keep corresponding positioning
+        #else append the word to the wordList, and append a new count to countList
+        #  the wordList and countList will keep corresponding positioning
           wordList.append(word)
-          tupleList.append([word,1])
+          countList.append(1)
       line = textfile.readline().lower()
   textfile.close()
+  tupleList = list()
+  for y in range(len(wordList)):
+    tupleList.append([wordList[y], countList[y]])
   return tupleList
 
 def tupleCount(tuple):
