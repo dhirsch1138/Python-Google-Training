@@ -46,15 +46,15 @@ import sys
 # Then print_words() and print_top() can just call the utility function.
 
 def print_words(filename):
-  list = count_words(filename)
-  list.sort(key=tupleValue)
-  print_output(list)
+  tupleList = count_words(filename)
+  tupleList.sort(key=tupleValue)
+  print_output(tupleList)
   return 1
 
 def print_top(filename):
-  list = count_words(filename)
-  list.sort(key=tupleCount, reverse=True)
-  print_output(list[0:20])
+  tupleList = count_words(filename)
+  tupleList.sort(key=tupleCount, reverse=True)
+  print_output(tupleList[0:20])
   return 1
 
 def print_output(tupleList):
@@ -68,21 +68,27 @@ def count_words(filename):
   wordList = list()
   countList = list()
   textfile = open(filename, 'r')
+  #Start by reading the first set of lines from filename
   lines = textfile.readlines(100)
+  #While there are still lines to read
   while lines:
+    #process one line at a time
     for line in lines:
+      #the instructions say everything should be treated as lowercase
       line = line.lower()
+      #process each word in the line, where words the line delimited by spaces
       for word in line.split(" "):
-        #if we find word in wordList then increment the count in countList
+        #IF we find word in wordList then increment THEN count in countList
         #  the wordList and countList will keep corresponding positioning
         try:
           wordIndex = wordList.index(word)
           countList[wordIndex] = countList[wordIndex] + 1
         except ValueError:
-        #else append the word to the wordList, and append a new count to countList
+        #ELSE append the word to the wordList, and append a new count to countList
         #  the wordList and countList will keep corresponding positioning
           wordList.append(word)
           countList.append(1)
+    # read in the next set of lines (if available) and go back to the while loop test
     lines = textfile.readlines(100)
   textfile.close()
   # return the wordList and countList transposed into a tuple list
