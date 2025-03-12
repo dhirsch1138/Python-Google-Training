@@ -70,12 +70,12 @@ def count_words(filename):
   textfile = open(filename, 'r')
   line = textfile.readline().lower()
   while line:
-      for word in [repr(y) for y in line.split(" ")]:
+      for word in line.split(" "):
         #if we find word in wordList then increment the count in countList
         #  the wordList and countList will keep corresponding positioning
         try:
-          x = wordList.index(word)
-          countList[x] = countList[x] + 1
+          wordIndex = wordList.index(word)
+          countList[wordIndex] = countList[wordIndex] + 1
         except ValueError:
         #else append the word to the wordList, and append a new count to countList
         #  the wordList and countList will keep corresponding positioning
@@ -83,10 +83,8 @@ def count_words(filename):
           countList.append(1)
       line = textfile.readline().lower()
   textfile.close()
-  tupleList = list()
-  for y in range(len(wordList)):
-    tupleList.append([wordList[y], countList[y]])
-  return tupleList
+  # return the wordList and countList transposed into a tuple list
+  return [[repr(wordList[tupleIndex]), countList[tupleIndex]] for tupleIndex in range(len(wordList))]
 
 def tupleCount(tuple):
   return tuple[1]
